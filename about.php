@@ -1,17 +1,3 @@
-<?php
-
-include 'components/connect.php';
-
-session_start();
-
-if(isset($_SESSION['user_id'])){
-   $user_id = $_SESSION['user_id'];
-}else{
-   $user_id = '';
-};
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,9 +16,6 @@ if(isset($_SESSION['user_id'])){
 
 </head>
 <body>
-   
-<?php include 'components/user_header.php'; ?>
-
 <section class="about">
 
    <div class="row">
@@ -145,43 +128,8 @@ if(isset($_SESSION['user_id'])){
 
 </section>
 
-
-
-
-
-
-
-
-
-<?php include 'components/footer.php'; ?>
-
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
 <script src="js/script.js"></script>
-
-<script>
-
-var swiper = new Swiper(".reviews-slider", {
-   loop:true,
-   spaceBetween: 20,
-   pagination: {
-      el: ".swiper-pagination",
-      clickable:true,
-   },
-   breakpoints: {
-      0: {
-        slidesPerView:1,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      991: {
-        slidesPerView: 3,
-      },
-   },
-});
-
-</script>
-
 </body>
 </html>

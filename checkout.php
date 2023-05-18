@@ -1,16 +1,5 @@
 <?php
 
-include 'components/connect.php';
-
-session_start();
-
-if(isset($_SESSION['user_id'])){
-   $user_id = $_SESSION['user_id'];
-}else{
-   $user_id = '';
-   header('location:user_login.php');
-};
-
 if(isset($_POST['order'])){
 
    $name = $_POST['name'];
@@ -62,9 +51,6 @@ if(isset($_POST['order'])){
 
 </head>
 <body>
-   
-<?php include 'components/user_header.php'; ?>
-
 <section class="checkout-orders">
 
    <form action="" method="POST">
@@ -150,20 +136,6 @@ if(isset($_POST['order'])){
    </form>
 
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <?php include 'components/footer.php'; ?> -->
 
 <script src="js/script.js"></script>
 

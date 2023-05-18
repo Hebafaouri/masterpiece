@@ -1,14 +1,6 @@
 <?php
 
-include 'components/connect.php';
 
-session_start();
-
-if(isset($_SESSION['user_id'])){
-   $user_id = $_SESSION['user_id'];
-}else{
-   $user_id = '';
-};
 
 if(isset($_POST['send'])){
 
@@ -57,7 +49,6 @@ if(isset($_POST['send'])){
 </head>
 <body>
    
-<?php include 'components/user_header.php'; ?>
 
 <section class="contact">
 
@@ -71,21 +62,6 @@ if(isset($_POST['send'])){
    </form>
 
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<?php include 'components/footer.php'; ?>
-
 <script src="js/script.js"></script>
 
 </body>
